@@ -25,6 +25,7 @@
             width: 300px;
             position: relative;
             overflow: hidden;
+            z-index: 10;
         }
         .container::before {
             content: '';
@@ -36,6 +37,7 @@
             right: -50px;
             box-shadow: 10px 10px 5px 12px lightblue;
             border-radius: 100%;
+            z-index: 11;
         }
         .container::after {
             content: '';
@@ -47,6 +49,7 @@
             left: -50px;
             box-shadow: -10px -10px 5px 12px red;
             border-radius: 100%;
+            z-index: 11;
             }
         input, select, button {
             margin: 10px 0;
@@ -55,6 +58,8 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             text-align: center;
+            position: relative;
+            z-index: 12;
         }
         input {
             width: 93%;
@@ -72,6 +77,8 @@
             margin-top: 20px;
             width: 100%;
             border-collapse: collapse;
+            position: relative;
+            z-index: 12;
         }
         .result-table th, .result-table td {
             padding: 10px;
