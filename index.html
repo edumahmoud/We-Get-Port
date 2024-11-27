@@ -37,6 +37,17 @@
             box-shadow: 10px 10px 5px 12px lightblue;
             border-radius: 100%;
         }
+        .container::after {
+            content: '';
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            bottom: -40px;
+            left: -50px;
+            box-shadow: -10px -10px 5px 12px red;
+            border-radius: 100%;
+            }
         input, select, button {
             margin: 10px 0;
             padding: 10px;
