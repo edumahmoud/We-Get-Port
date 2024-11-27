@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة المنافذ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+        input {
+            width: 93%;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .result-table th, .result-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        .result-table th {
+            background-color: #007BFF;
+            color: white;
+        }    
+        .cr {
+            text-align: center;
+            color: black;
+        }
+        .cr a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>حاسبة المنافذ</h2>
+        <label for="total-port">أدخل رقم المنفذ:</label>
+        <input type="number" id="total-port" placeholder="عدد المنافذ">
+        
+        <label for="cabinet-type">اختر نوع الكابينة:</label>
+        <select id="cabinet-type">
+            <option value="">اختر النوع</option>
+            <option value="h">Huawei</option>
+            <option value="o">ZTE / NOKIA</option>
+        </select>
+        
+        <button onclick="calculatePort()">حساب</button>
+
+        <div class="result" id="result"></div>
+        <table id="result-table" class="result-table" style="display:none;">
+            <thead>
+                <tr>
+                    <th>الصف</th>
+                    <th>العمود</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="row-result"></td>
+                    <td id="col-result"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br /><br />
+        <span class="cr">Created by ❤ with <a href="https://www.facebook.com/m.helaly0">Tech - Mahmoud Ramadan</a></span>
+    </div>
+    
+    
+    <script>
+        function calculatePort() {
+            const total = parseInt(document.getElementById('total-port').value);
+            const cType = document.getElementById('cabinet-type').value;
+
+            if (!total || !cType) {
+                document.getElementById('result').innerText = 'يرجى إدخال جميع الحقول المطلوبة!';
+                document.getElementById('result-table').style.display = 'none';
+                return;
+            }
+
+            const totalRes = total / 16;
+            const row = Math.floor(totalRes) + 1;
+            const port = totalRes - Math.floor(totalRes);
+
+            const cols = [];
+            for (let x = 1; x <= 16; x++) {
+                cols.push(x / 16);
+            }
+
+            const col = cols.indexOf(port) + 1;
+
+            let colResult, rowResult;
+            if (cType === 'h') {
+                if (col == 0) {
+                    colResult = 16;
+                    rowResult = row - 1;
+                } else {
+                    colResult = col - 1;
+                    rowResult = row;
+                }                
+            } else if (cType === 'o') {    
+                if (col == 0) {
+                    colResult = 16;
+                    rowResult = row - 1;
+                } else {
+                    colResult = col;
+                    rowResult = row;
+                }            
+            } else {
+                document.getElementById('result').innerText = 'يرجى اختيار نوع الكابينة الصحيح!';
+                document.getElementById('result-table').style.display = 'none';
+                return;
+            }
+
+            document.getElementById('row-result').innerText = rowResult;
+            document.getElementById('col-result').innerText = colResult;
+            document.getElementById('result-table').style.display = 'table';
+        }
+    </script>
+</body>
+</html>
