@@ -24,6 +24,16 @@
             text-align: center;
             width: 300px;
         }
+        .container::before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: -40px;
+            right: -50px;
+            box-shadow: 0 0 5px 1px #ffff00;
+        }
         input, select, button {
             margin: 10px 0;
             padding: 10px;
@@ -59,7 +69,7 @@
             color: white;
         }    
         .cr {
-            text-align: center;
+            text-align: left;
             color: black;
         }
         .cr a {
@@ -69,8 +79,8 @@
 </head>
 <body>
     <div class="container">
-        <h2>حاسبة المنافذ</h2>
-        <label for="total-port">أدخل رقم البورت</label>
+        <h2>WeGet - Port</h2>
+        <label for="total-port">أدخل رقم الفريم</label>
         <input type="number" id="total-port" placeholder="عدد المنافذ">
         
         <label for="cabinet-type">اختر نوع الكابينة</label>
