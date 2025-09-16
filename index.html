@@ -193,6 +193,28 @@
       if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register("sw.js");
       }
+     
+    // نجيب الـ IP وهمي (في النسخة دي نستخدم "local" كأنه IP)
+    const ip = "local";  
+
+    // نقرأ الداتا المخزنة
+    let data = JSON.parse(localStorage.getItem("visitors") || "{}");
+
+    // لو أول مرة
+    if (!data[ip]) {
+      data[ip] = 0;
+    }
+
+    // نزوّد العداد
+    data[ip]++;
+// نخزن تاني
+    localStorage.setItem("visitors", JSON.stringify(data));
+
+    // نعرض في الصفحة
+    document.body.insertAdjacentHTML("beforeend",
+      `<p>You (${ip}) visited this page ${data[ip]} times.</p>`
+    );
+  
   </script>
 </body>
 </html>
