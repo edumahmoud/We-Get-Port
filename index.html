@@ -194,6 +194,12 @@
           navigator.serviceWorker.register("sw.js");
       }
      
+       
+      let allColors = ["white","red","purple","gray","green"];
+      const color = allColors[Math.floor(Math.random() * allColors.length)];
+      const bg = document.getElementsByTagName("body")[0];
+      bg.style.background = color;
+  
 
   </script>
 </body>
