@@ -196,17 +196,28 @@
           document.getElementById('result-table').style.display = 'table';
       }
 
-      // Service Worker register
-      if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("sw.js");
-      }
      
-       
+      // Background Color Changer 
       let allColors = ["#95D392","#AF92D3","#6D399D","#9D3969","#AAA9E0","#ECECF8"];
       const color = allColors[Math.floor(Math.random() * allColors.length)];
       const bg = document.getElementsByTagName("body")[0];
       bg.style.background = color;
-  
+
+    
+      // Service Worker register
+      if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("sw.js");
+      }
+
+    
+      // Cache Editor
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistration().then(reg => {
+          if (reg && reg.waiting) {
+              reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+          }
+          });
+      }
 
   </script>
 </body>
