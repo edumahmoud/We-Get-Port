@@ -21,7 +21,7 @@ self.addEventListener("fetch", e => {
 });
 */
 
-const CACHE_NAME = "weget-cache-v2";
+const CACHE_NAME = "weget-cache-v2.1";
 
 self.addEventListener("install", e => {
   e.waitUntil(
