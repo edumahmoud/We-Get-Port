@@ -110,7 +110,7 @@
   </style>
 </head>
 <body>
-  <!--
+  
   <div class="container">
     <h1 class="lable">حاسبة البورتات</h1>
       <h2>WeGet - Port</h2>
@@ -144,7 +144,7 @@
       <br /><br />
       <span class="cr">Created with ❤️ by <a href="https://www.facebook.com/m.helaly0" target="_blank">Tech - Mahmoud Ramadan</a></span>
   </div>
-  -->
+  
   <script>
 
       function calculatePort() {
@@ -194,14 +194,16 @@
           document.getElementById('row-result').innerText = rowResult;
           document.getElementById('col-result').innerText = colResult;
           document.getElementById('result-table').style.display = 'table';
+        
+        // Background Color Changer 
+          let allColors = ["#95D392","#AF92D3","#6D399D","#9D3969","#AAA9E0","#ECECF8"];
+          const color = allColors[Math.floor(Math.random() * allColors.length)];
+          const bg = document.getElementsByTagName("body")[0];
+          bg.style.background = color;
       }
 
      
-      // Background Color Changer 
-      let allColors = ["#95D392","#AF92D3","#6D399D","#9D3969","#AAA9E0","#ECECF8"];
-      const color = allColors[Math.floor(Math.random() * allColors.length)];
-      const bg = document.getElementsByTagName("body")[0];
-      bg.style.background = color;
+      
 
     
       // Service Worker register
