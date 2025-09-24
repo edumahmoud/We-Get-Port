@@ -226,6 +226,41 @@
           });
       }
 
+// منع كليك يمين
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+// منع اختصارات شائعة
+document.addEventListener('keydown', function (e) {
+
+    // F12 (أدوات المطور)
+    if (e.key === "F12" || e.keyCode === 123) {
+        e.preventDefault();
+    }
+// Ctrl+U (عرض السورس)
+    if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
+        e.preventDefault();
+    }
+
+    // Ctrl+S (حفظ الصفحة)
+    if (e.ctrlKey && (e.key === "s" || e.key === "S")) {
+        e.preventDefault();
+    }
+
+    // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey && (
+        e.key.toLowerCase() === "i" ||
+        e.key.toLowerCase() === "j" ||
+        e.key.toLowerCase() === "c")) {
+        e.preventDefault();
+    }
+ Ctrl+Shift+K (في بعض المتصفحات)
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+    }
+});
+
   </script>
 </body>
   -->
