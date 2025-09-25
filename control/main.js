@@ -1,12 +1,3 @@
-// Visit Counter
-window.onload = function() {
-    let visits = localStorage.getItem('visitCount') || 0;
-    visits = parseInt(visits) + 1;
-    localStorage.setItem('visitCount', visits);
-    document.getElementById('counter').innerText = visits;
-};
-
-
 // Main Job
 function calculatePort() {
 
