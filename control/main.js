@@ -3,8 +3,6 @@ function calculatePort() {
     const total = parseInt(document.getElementById('total-port').value);
     const cType = document.getElementById('cabinet-type').value;
     
-    document.getElementById("more-data").style.display = 'none';
-
     if (!total || !cType) {
         document.getElementById('result').innerText = 'يرجى إدخال جميع الحقول المطلوبة!';
         document.getElementById('result-table').style.display = 'none';
