@@ -32,7 +32,7 @@ function calculatePort() {
             rowResult = row;
         }                
     } else if (cType === 'o') { // if cabinet is other cabinet (ZTE / Nokia).
-        document.getElementById("more-data").style.display = 'table';
+        document.getElementById("more-data").style.display = 'block';
 
         if (col == 0) {
             colResult = 16;
