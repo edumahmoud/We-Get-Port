@@ -224,7 +224,7 @@
           }
           });
       }
-
+/*
 // منع كليك يمين
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
@@ -259,6 +259,23 @@ document.addEventListener('keydown', function (e) {
         e.preventDefault();
     }
 });
+*/
+    
+  // منع كليك يمين
+  document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+  });
+
+  // منع اختصارات DevTools
+  document.addEventListener("keydown", function(e) {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
+      (e.ctrlKey && e.key === "U")
+    ) {
+      e.preventDefault();
+    }
+  });
 
   </script>
 </body>
