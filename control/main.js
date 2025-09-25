@@ -23,6 +23,7 @@ function calculatePort() {
     const col = cols.indexOf(port) + 1;
 
     let colResult, rowResult;
+
     if (cType === 'h') { // if cabinet is Huawei.
         if (col == 0) {
             colResult = 15;
@@ -32,7 +33,6 @@ function calculatePort() {
             rowResult = row;
         }                
     } else if (cType === 'o') { // if cabinet is other cabinet (ZTE / Nokia).
-        // document.getElementById("more-data").style.display = 'block';
 
         if (col == 0) {
             colResult = 16;
@@ -41,11 +41,6 @@ function calculatePort() {
             colResult = col;
             rowResult = row;
         }      
-
-        let cardNumber = parseInt(total / 64);
-        // let portInCard = total 
-
-
 
     } else { //  // if cabinet is not selected.
 
@@ -58,8 +53,6 @@ function calculatePort() {
 
     document.getElementById('row-result').innerText = rowResult;
     document.getElementById('col-result').innerText = colResult;
-    // document.getElementById('port-in-card').innerHTML = null;
-    // document.getElementById('card-num').innerHTML = cardNumber;
     document.getElementById('result-table').style.display = 'table';
 
 }
