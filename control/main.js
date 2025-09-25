@@ -60,7 +60,7 @@ function calculatePort() {
     document.getElementById('col-result').innerText = colResult;
     // document.getElementById('port-in-card').innerHTML = null;
     // document.getElementById('card-num').innerHTML = cardNumber;
-    // document.getElementById('result-table').style.display = 'table';
+    document.getElementById('result-table').style.display = 'table';
 
 }
 
