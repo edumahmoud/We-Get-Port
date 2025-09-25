@@ -21,7 +21,7 @@ function calculatePort() {
     const col = cols.indexOf(port) + 1;
 
     let colResult, rowResult;
-    if (cType === 'Huawei') {
+    if (cType === 'h') {
         if (col == 0) {
             colResult = 15;
             rowResult = row - 1;
@@ -29,7 +29,7 @@ function calculatePort() {
             colResult = col - 1;
             rowResult = row;
         }                
-    } else if (cType === 'Z_N') {
+    } else if (cType === 'o') {
         if (col == 0) {
             colResult = 16;
             rowResult = row - 1;
@@ -46,7 +46,6 @@ function calculatePort() {
     document.getElementById('row-result').innerText = rowResult;
     document.getElementById('col-result').innerText = colResult;
     document.getElementById('result-table').style.display = 'table';
-
 
 }
 
