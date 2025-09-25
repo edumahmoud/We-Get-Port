@@ -2,6 +2,8 @@
 function calculatePort() {
     const total = parseInt(document.getElementById('total-port').value);
     const cType = document.getElementById('cabinet-type').value;
+    
+    document.getElementById("more-data").style.display = 'none';
 
     if (!total || !cType) {
         document.getElementById('result').innerText = 'يرجى إدخال جميع الحقول المطلوبة!';
@@ -30,6 +32,8 @@ function calculatePort() {
             rowResult = row;
         }                
     } else if (cType === 'o') { // if cabinet is other cabinet (ZTE / Nokia).
+        document.getElementById("more-data").style.display = 'table';
+
         if (col == 0) {
             colResult = 16;
             rowResult = row - 1;
