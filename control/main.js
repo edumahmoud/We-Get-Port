@@ -15,6 +15,7 @@ function calculatePort() {
     const row = Math.floor(totalRes) + 1;
     const port = totalRes - Math.floor(totalRes);
 
+    // Add ports in list to complete 16 port
     const cols = [];
     for (let x = 1; x <= 16; x++) {
         cols.push(x / 16);
