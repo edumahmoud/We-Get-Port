@@ -1,6 +1,6 @@
 // Main Job
 function calculatePort() {
-    const total = parseInt(document.getElementById('frame-number').value);
+    const total = parseInt(document.getElementById('total-port').value);
     const cType = document.getElementById('cabinet-type').value;
 
     if (!total || !cType) {
