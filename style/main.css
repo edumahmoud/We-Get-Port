@@ -97,3 +97,10 @@ button:hover {
 .cr a {
     text-decoration: none;
 }
+
+#visit-counter {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}

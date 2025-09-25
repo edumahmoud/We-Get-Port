@@ -1,5 +1,15 @@
+// Visit Counter
+window.onload = function() {
+    let visits = localStorage.getItem('visitCount') || 0;
+    visits = parseInt(visits) + 1;
+    localStorage.setItem('visitCount', visits);
+    document.getElementById('counter').innerText = visits;
+};
+
+
 // Main Job
 function calculatePort() {
+
     const total = parseInt(document.getElementById('total-port').value);
     const cType = document.getElementById('cabinet-type').value;
     
@@ -47,14 +57,18 @@ function calculatePort() {
         document.getElementById('result-table').style.display = 'none';
         return;
     }
-
     
-
+    // View Results In Table.
     document.getElementById('row-result').innerText = rowResult;
     document.getElementById('col-result').innerText = colResult;
     document.getElementById('result-table').style.display = 'table';
 
+    
 }
+
+
+
+
 
 
 
