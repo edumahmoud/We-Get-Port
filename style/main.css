@@ -97,7 +97,7 @@ button:hover {
 .cr a {
     text-decoration: none;
 }
-#show-more {
+#show-more span {
     cursor: pointer;
     color: #0056b3;
     font-size: 18px;
