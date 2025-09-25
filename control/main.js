@@ -21,7 +21,7 @@ function calculatePort() {
     const col = cols.indexOf(port) + 1;
 
     let colResult, rowResult;
-    if (cType === 'h') {
+    if (cType === 'Huawei') {
         if (col == 0) {
             colResult = 15;
             rowResult = row - 1;
@@ -29,7 +29,7 @@ function calculatePort() {
             colResult = col - 1;
             rowResult = row;
         }                
-    } else if (cType === 'o') {    
+    } else if (cType === 'Z_N') {
         if (col == 0) {
             colResult = 16;
             rowResult = row - 1;
@@ -51,42 +51,4 @@ function calculatePort() {
 }
 
 
-// Background Color Changer 
-let allColors = ["#95D392","#AF92D3","#6D399D","#9D3969","#AAA9E0","#ECECF8"];
-const color = allColors[Math.floor(Math.random() * allColors.length)];
-const bg = document.getElementsByTagName("body")[0];
-bg.style.background = color;
- 
-    
 
-
-// Service Worker register
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
-}
-
-
-// Cache Editor
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistration().then(reg => {
-    if (reg && reg.waiting) {
-        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-    }
-    });
-}
-
-// منع كليك يمين
-document.addEventListener("contextmenu", function(e){
-e.preventDefault();
-});
-
-// منع اختصارات DevTools
-document.addEventListener("keydown", function(e) {
-if (
-    e.key === "F12" ||
-    (e.ctrlKey && e.shiftKey && (e.key == "i" || e.key == "j" || e.key == "c")) ||
-    (e.ctrlKey && e.key == "u")
-) {
-    e.preventDefault();
-}
-});
