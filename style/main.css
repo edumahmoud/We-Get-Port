@@ -99,6 +99,7 @@ button:hover {
 }
 #show-more {
     cursor: pointer;
-    color: #FFF;
-    
+    color: #0056b3;
+    font-size: 22px;
+
 }
