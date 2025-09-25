@@ -38,6 +38,11 @@ function calculatePort() {
             rowResult = row;
         }      
 
+        let cardNumber = parseInt(total / 64);
+        // let portInCard = total 
+
+
+
     } else { //  // if cabinet is not selected.
 
         document.getElementById('result').innerText = 'يرجى اختيار نوع الكابينة الصحيح!';
@@ -49,6 +54,8 @@ function calculatePort() {
 
     document.getElementById('row-result').innerText = rowResult;
     document.getElementById('col-result').innerText = colResult;
+    document.getElementById('port-in-card').innerHTML = null;
+    document.getElementById('card-num').innerHTML = cardNumber;
     document.getElementById('result-table').style.display = 'table';
 
 }
