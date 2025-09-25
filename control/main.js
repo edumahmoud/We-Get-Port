@@ -32,7 +32,7 @@ function calculatePort() {
             rowResult = row;
         }                
     } else if (cType === 'o') { // if cabinet is other cabinet (ZTE / Nokia).
-        document.getElementById("more-data").style.display = 'block';
+        // document.getElementById("more-data").style.display = 'block';
 
         if (col == 0) {
             colResult = 16;
@@ -58,9 +58,9 @@ function calculatePort() {
 
     document.getElementById('row-result').innerText = rowResult;
     document.getElementById('col-result').innerText = colResult;
-    document.getElementById('port-in-card').innerHTML = null;
-    document.getElementById('card-num').innerHTML = cardNumber;
-    document.getElementById('result-table').style.display = 'table';
+    // document.getElementById('port-in-card').innerHTML = null;
+    // document.getElementById('card-num').innerHTML = cardNumber;
+    // document.getElementById('result-table').style.display = 'table';
 
 }
 
