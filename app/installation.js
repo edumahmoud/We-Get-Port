@@ -1,6 +1,6 @@
 // Service Worker register
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./control/sw.js");
+    navigator.serviceWorker.register("./app/sw.js");
 }
 
 

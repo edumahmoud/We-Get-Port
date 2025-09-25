@@ -6,7 +6,12 @@ self.addEventListener("install", e => {
       return cache.addAll([
         "./",
         "./index.html",
-        "./control/manifest.json",
+        "./app/manifest.json",
+        "./app/installation.js",
+        "./control/main.js",
+        "./features/bg-changer.js",
+        "./features/hide.js",
+        "./style/main.css",
         "./images/icon.png"
       ]);
     })
