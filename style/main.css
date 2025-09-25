@@ -97,3 +97,8 @@ button:hover {
 .cr a {
     text-decoration: none;
 }
+#show-more {
+    cursor: pointer;
+    color: #FFF;
+    
+}
