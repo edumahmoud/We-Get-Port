@@ -270,8 +270,8 @@ document.addEventListener('keydown', function (e) {
   document.addEventListener("keydown", function(e) {
     if (
       e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
-      (e.ctrlKey && e.key === "U") || (e.ctrlKey && e.key === "u")
+      (e.ctrlKey && e.shiftKey && (e.key == "i" || e.key == "j" || e.key == "c")) ||
+      (e.ctrlKey && e.key == "u")
     ) {
       e.preventDefault();
     }
