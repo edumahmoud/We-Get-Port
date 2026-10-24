@@ -240,10 +240,10 @@ export default function Home() {
                 <TableHeader>
                   <TableRow className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-600 hover:to-indigo-600">
                     <TableHead className="text-white text-center font-bold text-base">
-                      الصف
+                      البورت
                     </TableHead>
                     <TableHead className="text-white text-center font-bold text-base">
-                      العمود
+                      المشط
                     </TableHead>
                   </TableRow>
                 </TableHeader>
@@ -270,7 +270,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-purple-600 hover:text-purple-800 font-semibold underline underline-offset-2"
             >
-              Tech - Mahmoud Ramadan
+              Dev - Mahmoud Ramadan
             </a>
           </div>
         </CardContent>
