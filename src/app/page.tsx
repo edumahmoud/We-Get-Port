@@ -240,10 +240,10 @@ export default function Home() {
                 <TableHeader>
                   <TableRow className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-600 hover:to-indigo-600">
                     <TableHead className="text-white text-center font-bold text-base">
-                      البورت
+                      المشط
                     </TableHead>
                     <TableHead className="text-white text-center font-bold text-base">
-                      المشط
+                      البورت
                     </TableHead>
                   </TableRow>
                 </TableHeader>
